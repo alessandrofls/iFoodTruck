@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">IFoodTruck</string>
+    <string name="login">Sign In</string>
+    <string name="signup">Sign Up</string>
+    <string name="Search">Search</string>
+    <string name="tvLogin">Login</string>
+    <string name="tvSenha">Password</string>
+    <string name="htLogin">Your Login</string>
+    <string name="htSenha">Your Password</string>
+    <string name="btEntrar">Enter</string>
+    <string name="cadNome">Nome</string>
+    <string name="cadEspecialidade">Especialidade</string>
+    <string name="cadNomeProprietario">Nome do Proprietário</string>
+    <string name="cadNomeUsuario">Nome de Uuario</string>
+    <string name="cadSenha">Senha</string>
+    <string name="cadConfirmaSenha">Confirmação de Senha</string>
+    <string name="cadTermosUso">Eu concordo com os termos de uso</string>
+    <string name="btnCadastras">Cadastrar</string>
+</resources>

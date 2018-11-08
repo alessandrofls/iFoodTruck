@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" tools:background="@android:color/background_dark">
+
+    <ImageView
+            android:layout_width="380dp"
+            android:layout_height="491dp" app:srcCompat="@mipmap/ifood" android:id="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout3"
+            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.0" android:scaleX="2"
+            android:scaleY="2"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="139dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/linearLayout3"
+    >
+
+        <android.support.design.button.MaterialButton
+                android:layout_width="149dp"
+                android:layout_height="37dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/login"
+                app:backgroundTint="?attr/colorError"
+                app:cornerRadius="10dp" tools:layout_editor_absoluteX="126dp" tools:layout_editor_absoluteY="171dp"/>
+
+        <android.support.design.button.MaterialButton
+                android:layout_width="149dp"
+                android:layout_height="37dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/signup"
+                app:backgroundTint="?attr/colorError"
+                app:cornerRadius="10dp" tools:layout_editor_absoluteX="126dp" tools:layout_editor_absoluteY="171dp"/>
+
+        <android.support.design.button.MaterialButton
+                android:layout_width="149dp"
+                android:layout_height="37dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/Search"
+                app:backgroundTint="?attr/colorError"
+                app:cornerRadius="10dp" tools:layout_editor_absoluteX="126dp" tools:layout_editor_absoluteY="171dp"/>
+        <!--app:icon="@mipmap/login" app:iconPadding="@dimen/dimlogin"/>-->
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
