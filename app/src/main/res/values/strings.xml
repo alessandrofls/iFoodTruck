@@ -8,7 +8,7 @@
     <string name="htLogin">Your Login</string>
     <string name="htSenha">Your Password</string>
     <string name="btEntrar">Enter</string>
-    <string name="cadNome">Nome</string>
+    <string name="cadNomeEstabelecimento">Nome do Estabelecimento</string>
     <string name="cadEspecialidade">Especialidade</string>
     <string name="cadNomeProprietario">Nome do Proprietário</string>
     <string name="cadNomeUsuario">Nome de Uuario</string>
@@ -16,4 +16,15 @@
     <string name="cadConfirmaSenha">Confirmação de Senha</string>
     <string name="cadTermosUso">Eu concordo com os termos de uso</string>
     <string name="btnCadastras">Cadastrar</string>
+    <string name="title_activity_tela_navigation">activity_tela_navigation</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

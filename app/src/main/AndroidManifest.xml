@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".activity_cadastro_foodtruck">
         </activity>
+        <activity android:name=".DrawerLayout">
+        </activity>
     </application>
 
 </manifest>
