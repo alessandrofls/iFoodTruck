@@ -1,9 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activity_cadastro_pratos">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/lightGrey"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:title="@string/bsTitulo"
+        app:titleTextColor="#FFFFFF"></android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/ifood" />
+
+            <android.support.design.button.MaterialButton
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorSecondary"
+                android:padding="20dp"
+                android:text="@string/btAddImagem" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tVNomePrato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/cadNomePrato"
+            android:textColor="@color/colorSecondaryDark"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/eTNomePrato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/cadNomePrato"
+            android:inputType="text"
+            android:textColorHint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textViewDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/cadDescricao"
+            android:textColor="@color/colorSecondaryDark"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/cadDescricao"
+            android:inputType="text"
+            android:textColorHint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/cadPrecoPrato"
+            android:textColor="@color/colorSecondaryDark"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/cadPrecoPrato"
+            android:inputType="numberDecimal"
+            android:textColorHint="@color/colorPrimary" />
+
+
+
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"-->
+            <!--android:layout_width="match_parent"-->
+
+            <!--android:layout_height="wrap_content">-->
+
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--&lt;!&ndash;android:background=""&ndash;&gt;-->
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <android.support.design.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:padding="20dp"
+                android:text="Cancelar"
+                android:textStyle="bold" />
+
+            <android.support.design.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorSecondary"
+                android:padding="20dp"
+                android:text="Cadastrar"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

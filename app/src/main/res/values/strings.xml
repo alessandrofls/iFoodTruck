@@ -27,4 +27,18 @@
     <string name="action_example">Example action</string>
 
     <string name="action_settings">Settings</string>
+    <string name="bsTitulo">Cadastro de Pratos</string>
+    <string name="cadNomePrato">Nome Prato</string>
+    <string name="cadDescricao">Descricao</string>
+    <string name="cadPrecoPrato">Preco</string>
+    <string name="btAddImagem">Adicionar Imagem</string>
+    <string name="cadTelefone">Telefone</string>
+    <string name="cadEndereco">Endereco</string>
+    <string name="inputNomeEstabelecimento">inputNomeEstabelecimento</string>
+    <string name="inputEspecialidade">inputEspecialidade</string>
+    <string name="inputNomeProprietario">inputNomeProprietario</string>
+    <string name="inputEndereco">inputEndereco</string>
+    <string name="inputTelefone">inputTelefone</string>
+    <string name="cadComentario">Digite Seu Comentario</string>
+    <string name="tvComentario">Comentarios</string>
 </resources>
