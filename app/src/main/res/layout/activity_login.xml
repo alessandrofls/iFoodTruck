@@ -12,10 +12,10 @@
             android:layout_height="150dp"
             android:layout_margin="30dp"
             android:id="@+id/appLogo"
-            android:src="@drawable/logo_ift"
+            android:src="@drawable/ift_logo_color"
             android:scaleType="fitCenter"/>
 
-    <ScrollView android:layout_width="match_parent"
+    <RelativeLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/appLogo">
         <LinearLayout
@@ -90,6 +90,6 @@
                 app:backgroundTint="@color/colorSecondary" />
 
         </LinearLayout>
-    </ScrollView>
+    </RelativeLayout>
 
 </RelativeLayout>

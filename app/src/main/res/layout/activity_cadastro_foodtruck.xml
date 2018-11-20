@@ -176,22 +176,24 @@
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
-            <android.support.design.button.MaterialButton
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/white"
                 android:padding="20dp"
                 android:text="Cancelar" />
 
-            <android.support.design.button.MaterialButton
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/colorSecondary"
                 android:padding="20dp"
+                android:textColor="@color/white"
                 android:text="Cadastrar" />
         </LinearLayout>
 

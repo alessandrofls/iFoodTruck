@@ -12,18 +12,18 @@
             android:layout_height="150dp"
             android:layout_margin="30dp"
             android:id="@+id/appLogo"
-            android:src="@drawable/logo_ift"
+            android:src="@drawable/ift_logo_color"
             android:scaleType="fitCenter"/>
 
     <ScrollView android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@id/appLogo">
         <LinearLayout
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:orientation="vertical"
                 android:layout_gravity="center_vertical">
-            <android.support.design.button.MaterialButton
+            <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/btnLogin"
@@ -33,7 +33,7 @@
                     android:layout_marginHorizontal="20dp"
                     android:padding="20dp"/>
 
-            <android.support.design.button.MaterialButton
+            <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/btnSignup"
@@ -43,7 +43,7 @@
                     android:layout_marginHorizontal="20dp"
                     android:padding="20dp"/>
 
-            <android.support.design.button.MaterialButton
+            <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/btnSearch"
