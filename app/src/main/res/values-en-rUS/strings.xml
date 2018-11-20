@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IFoodTruck</string>
+    <string name="login">Sign In</string>
+    <string name="signup">Sign Up</string>
+    <string name="Search">Search</string>
+    <string name="tvLogin">Login</string>
+    <string name="tvSenha">Password</string>
+    <string name="htLogin">Your Login</string>
+    <string name="htSenha">Your Password</string>
+    <string name="btEntrar">Enter</string>
+    <string name="cadNomeEstabelecimento">Establishment\'s Name</string>
+    <string name="cadEspecialidade">Specialty</string>
+    <string name="cadNomeProprietario">Owner\'s Name</string>
+    <string name="cadSenha">Password</string>
+    <string name="cadConfirmaSenha">Password Confirmation</string>
+    <string name="cadTermosUso">I agree to the terms of use</string>
+    <string name="btnCadastras">Subscribe</string>
+    <string name="title_activity_tela_navigation">activity_tela_navigation</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="bsTitulo">Subscribe dishes</string>
+    <string name="cadNomePrato">plates\'s name</string>
+    <string name="cadDescricao">Description</string>
+    <string name="cadPrecoPrato">Price</string>
+    <string name="btAddImagem">Add Image</string>
+    <string name="cadTelefone">Phone</string>
+    <string name="cadEndereco">"Address "</string>
+    <string name="inputNomeEstabelecimento">inputEstablishment\'s Name</string>
+    <string name="inputEspecialidade">inputSpecialty</string>
+    <string name="inputNomeProprietario">input Owner\'s Name</string>
+    <string name="inputEndereco">inputAddress</string>
+    <string name="inputTelefone">inputPhone</string>
+    <string name="cadComentario">Write your Comments</string>
+    <string name="tvComentario">Comments</string>
+    <string name="cadNomeUsuario">User\'s name</string>
+    <string name="cadLogin">Login</string>
+</resources>

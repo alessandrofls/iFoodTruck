@@ -124,6 +124,25 @@
             android:inputType="phone"
             android:textColorHint="@color/colorPrimary" />
 
+
+        <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/cadLogin"
+                android:textColor="@color/colorSecondaryDark"
+                android:textStyle="bold" />
+
+        <EditText
+                android:id="@+id/eTLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/cadLogin"
+                android:inputType="text"
+                android:textColorHint="@color/colorPrimary" />
+
         <TextView
             android:id="@+id/tvSenha"
             android:layout_width="match_parent"

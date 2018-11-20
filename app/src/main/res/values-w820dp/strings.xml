@@ -13,4 +13,5 @@
     <string name="inputTelefone">inputTelefone</string>
     <string name="cadComentario">Digite Seu Comentario</string>
     <string name="tvComentario">Comentarios</string>
+    <string name="cadLogin">Login</string>
 </resources>
