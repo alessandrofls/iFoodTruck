@@ -14,7 +14,7 @@ class ListaFoodTrucks : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_food_trucks)
 
-        val recyclerView =recyclerView
+        val recyclerView =l_recyclerView
         recyclerView.adapter = FoodTrucksRecyclerAdapter(notes(), this)
         val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         recyclerView.layoutManager = layoutManager

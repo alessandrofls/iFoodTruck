@@ -22,6 +22,10 @@ class TelaAdm : AppCompatActivity() {
             val intUpdate = Intent (this, activity_cadastro_foodtruck::class.java)
             startActivity(intUpdate)
         }
+        btnlstpratos.setOnClickListener(){
+            val ListPratos = Intent (this, ListaPratos::class.java)
+            startActivity(ListPratos)
+        }
     }
 
 }

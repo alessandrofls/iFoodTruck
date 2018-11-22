@@ -1,93 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<android.support.v7.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-    <ImageView
-            android:id="@+id/itemImage"
-            android:layout_width="150dp"
-            android:layout_height="178dp"
-            android:layout_gravity="start"
-            android:layout_marginTop="8dp"
-            android:adjustViewBounds="true" app:srcCompat="@mipmap/ifood"/>
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:maxHeight="250dp"
+        app:cardBackgroundColor="@color/lightGrey">
+
     <LinearLayout
-            android:orientation="vertical"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <TextView
-                android:id="@+id/tvNomeEstabelecimento"
-                android:layout_width="145dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/cadNomeEstabelecimento"
-                android:textColor="@color/colorSecondaryDark"
-                android:textSize="14sp"
-                android:textStyle="bold"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
 
-        <TextView
-                android:id="@+id/inputNomeEstabelecimento"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/inputNomeEstabelecimento"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp"/>
+        <ImageView
+                android:id="@+id/itemImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@mipmap/ifood"/>
 
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-                android:id="@+id/tvEspecialidade"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/cadEspecialidade"
-                android:textColor="@color/colorSecondaryDark"
-                android:textStyle="bold"/>
+            <TextView
+                    android:id="@+id/tvNomeEstabelecimento"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cadNomeEstabelecimento"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
 
-        <TextView
-                android:id="@+id/inputEspecialidade"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/inputEspecialidade"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp"/>
-        <TextView
-                android:id="@+id/cadEndereco"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/cadEndereco"
-                android:textColor="@color/colorSecondaryDark"
-                android:textStyle="bold"/>
-
-        <TextView
-                android:id="@+id/inputEndereco"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/inputEndereco"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp"/>
-
-        <TextView
-                android:id="@+id/cadTelefone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/cadTelefone"
-                android:textColor="@color/colorSecondaryDark"
-                android:textStyle="bold"/>
-
-        <TextView
-                android:id="@+id/inputTelefone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/inputTelefone"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp"/>
+            <TextView
+                    android:id="@+id/inputNomeEstabelecimento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/inputNomeEstabelecimento"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"/>
 
 
+            <TextView
+                    android:id="@+id/tvEspecialidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cadEspecialidade"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:id="@+id/inputEspecialidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/inputEspecialidade"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"/>
+
+            <TextView
+                    android:id="@+id/cadEndereco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cadEndereco"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:id="@+id/inputEndereco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/inputEndereco"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"/>
+
+            <TextView
+                    android:id="@+id/cadTelefone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cadTelefone"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:id="@+id/inputTelefone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/inputTelefone"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"/>
+
+
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</android.support.v7.widget.CardView>

@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             val int2 = Intent (this, activity_cadastro_foodtruck::class.java)
             startActivity(int2)
         }
-        btnSearch.setOnClickListener {
+        btnSearch.setOnClickListener (){
             val int3 = Intent (this, TelaInicial::class.java)
             startActivity(int3)
 

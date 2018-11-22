@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_height="match_parent"
-        android:layout_width="match_parent"
+<ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:background="@drawable/gradient_backgroud"
         xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".MainActivity">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Login">
+
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appLogo">
 
     <ImageView
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:layout_margin="30dp"
             android:id="@+id/appLogo"
-            android:src="@drawable/ift_logo_color"
-            android:scaleType="fitCenter"/>
+            android:src="@mipmap/ifood"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"/>
 
     <RelativeLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -28,21 +38,21 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Bem Vindo!"
                     android:textColor="@color/white"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" android:text="@string/msgboasvndasx"/>
+
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Esta é uma nova experiência de descoberta de FoodTrucks mais próximos de você!"
+                    android:text="@string/MsgDescricao"
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:layout_marginBottom="30dp"/>
             <AutoCompleteTextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:hint="Email"
+                    android:hint="@string/cadLogin"
                     android:textColorHint="#c6c6c6"
                     android:background="@drawable/rounded_white"
                     android:layout_marginStart="15dp"
@@ -58,7 +68,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:inputType="textPassword"
-                    android:hint="Senha"
+                    android:hint="@string/cadSenha"
                     android:textColorHint="#c6c6c6"
                     android:background="@drawable/rounded_white"
                     android:layout_marginStart="15dp"
@@ -74,22 +84,22 @@
                     android:id="@+id/lembrarUser"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lembrar usuário"
                     android:layout_gravity="center"
                     android:paddingLeft="5dp"
-                    android:textSize="11sp"/>
+                    android:textSize="11sp" android:text="@string/lembraruser"/>
 
             <android.support.design.button.MaterialButton
-                android:id="@+id/btentrar"
-                style="@style/Widget.MaterialComponents.Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:backgroundTint="@color/colorSecondaryDark"
-                android:text="@string/login"
-                app:backgroundTint="@color/colorSecondary" />
+                    android:id="@+id/btentrar"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="@color/colorSecondaryDark"
+                    android:text="@string/login"
+                    app:backgroundTint="@color/colorSecondary"/>
 
         </LinearLayout>
     </RelativeLayout>
 
 </RelativeLayout>
+</ScrollView>

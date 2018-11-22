@@ -46,17 +46,27 @@ class FoodTrucksRecyclerAdapter (private val notes: List<FoodTruck>, private val
             endereco.text= note.endereco
         }
 
-    }
-
-    class CustomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         init {
-            itemView.setOnClickListener(){
-              val Detalhes = Intent(itemView.context,TelaUser::class.java)
-                itemView.context.startActivity(Detalhes)
+            itemView.setOnClickListener{
+                val Detalhes = Intent(itemView.context, TelaUser::class.java)
+                Detalhes.putExtra("nomeEstab",itemView.inputNomeEstabelecimento.text.toString() )
+                Detalhes.putExtra("Espec",itemView.inputEspecialidade.text.toString() )
+                Detalhes.putExtra("telefone",itemView.inputTelefone.text.toString() )
+                Detalhes.putExtra("endereco",itemView.inputEndereco.text.toString() )
 
+                itemView.context.startActivity(Detalhes)
             }
         }
 
     }
 
 }
+//class CustomViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+//    init {
+//         view.setOnClickListener{
+//            val Detalhes = Intent(view.context, TelaUser::class.java)
+//            view.context.startActivity(Detalhes)
+//        }
+//    }
+//
+//}

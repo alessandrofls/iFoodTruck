@@ -2,6 +2,8 @@ package com.example.ifoodtruck
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_cadastro_foodtruck.*
 
 class activity_cadastro_foodtruck : AppCompatActivity() {
 
@@ -10,5 +12,15 @@ class activity_cadastro_foodtruck : AppCompatActivity() {
         setContentView(R.layout.activity_cadastro_foodtruck)
 
         var int = getIntent()
+
+        btncadastrar.setOnClickListener(){
+            Toast.makeText(this, R.string.messagemcadastrar, Toast.LENGTH_SHORT).show()
+
+        }
+
+       btncancelar.setOnClickListener(){
+
+       }
+
     }
 }
