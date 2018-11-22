@@ -1,8 +1,8 @@
 package com.example.ifoodtruck
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_tela_inicial.*
 
 class TelaInicial : AppCompatActivity() {
@@ -17,5 +17,7 @@ class TelaInicial : AppCompatActivity() {
             val intListFood = Intent (this, ListaFoodTrucks::class.java)
             startActivity(intListFood)
         }
+
     }
+
 }

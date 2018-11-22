@@ -60,4 +60,5 @@
     <string name="VisualizarPratos">View Dishes</string>
     <string name="EnviarComentario">Send Comments</string>
     <string name="tpPreco">R$</string>
+    <string name="Mapa">Ir para o Mapa</string>
 </resources>

@@ -30,4 +30,5 @@
     <string name="VisualizarPratos">Visualizar Pratos</string>
     <string name="EnviarComentario">Enviar Comentario</string>
     <string name="tpPreco">R$</string>
+    <string name="Mapa">Ir para o Mapa</string>
 </resources>
