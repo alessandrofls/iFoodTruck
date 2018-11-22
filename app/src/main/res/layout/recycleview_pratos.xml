@@ -1,7 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
+    <ImageView
+            android:id="@+id/inputImage"
+            android:layout_width="140dp"
+            android:layout_height="137dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true" app:srcCompat="@mipmap/ifood"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/tVNomePrato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/cadNomePrato"
+                android:textColor="@color/colorSecondaryDark"
+                android:textStyle="bold" android:layout_marginTop="10dp"/>
+
+        <TextView
+                android:id="@+id/inputNomePrato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/cadNomePrato"
+                android:textColor="@color/colorSecondaryDark"
+                android:textStyle="normal" />
+
+        <TextView
+                android:id="@+id/textViewDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/cadDescricao"
+                android:textColor="@color/colorSecondaryDark"
+                android:textStyle="bold" android:layout_marginTop="5dp"/>
+
+        <TextView
+                android:id="@+id/inputDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/cadDescricao"
+                android:textColor="@color/colorSecondaryDark"
+                android:textStyle="normal" />
+
+
+        <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/cadPrecoPrato"
+                android:textColor="@color/colorSecondaryDark"
+                android:textStyle="bold" android:layout_marginTop="5dp"/>
+
+        <TextView
+                android:id="@+id/inputPreco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/cadPrecoPrato"
+                android:textColor="@color/colorSecondaryDark"
+                android:textStyle="normal" />
+
+    </LinearLayout>
+
 
 </LinearLayout>

@@ -25,6 +25,8 @@
         <activity android:name=".TelaInicial"/>
         <activity android:name=".ListaFoodTrucks">
         </activity>
+        <activity android:name=".ListaPratos">
+        </activity>
     </application>
 
 </manifest>

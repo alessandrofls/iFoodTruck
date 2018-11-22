@@ -14,4 +14,6 @@
     <string name="cadComentario">Digite Seu Comentario</string>
     <string name="tvComentario">Comentarios</string>
     <string name="cadLogin">Login</string>
+    <string name="Cancelar">Cancelar</string>
+    <string name="Cadastrar">Cadastrar</string>
 </resources>

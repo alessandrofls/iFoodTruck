@@ -56,6 +56,7 @@
             android:textColor="@color/colorSecondaryDark"
             android:textStyle="bold" />
 
+
         <EditText
             android:id="@+id/eTNomePrato"
             android:layout_width="match_parent"
@@ -137,7 +138,7 @@
                 android:backgroundTint="@color/colorPrimary"
                 android:padding="20dp"
                 android:textColor="@color/white"
-                android:text="Cancelar"
+                android:text="@string/Cancelar"
                 android:textStyle="bold" />
 
             <Button
@@ -149,7 +150,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="@color/colorSecondary"
                 android:padding="20dp"
-                android:text="Cadastrar"
+                android:text="@string/Cadastrar"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
         </LinearLayout>

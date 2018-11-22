@@ -43,4 +43,6 @@
     <string name="tvComentario">Comments</string>
     <string name="cadNomeUsuario">User\'s name</string>
     <string name="cadLogin">Login</string>
+    <string name="Cancelar">Cancelar</string>
+    <string name="Cadastrar">Cadastrar</string>
 </resources>

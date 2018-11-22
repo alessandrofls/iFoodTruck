@@ -73,16 +73,16 @@
                 android:textStyle="bold" />
 
             <android.support.design.button.MaterialButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/colorSecondary"
-                android:padding="20dp"
-                android:text="Listar FoodTrucks"
-                android:textStyle="bold" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorSecondary"
+                    android:padding="20dp"
+                    android:text="Listar FoodTrucks"
+                    android:textStyle="bold" android:id="@+id/btnlistfood"/>
         </LinearLayout>
 
 

@@ -42,4 +42,6 @@
     <string name="tvComentario">Comentarios</string>
     <string name="Search">Pesquisar</string>
     <string name="cadLogin">Login</string>
+    <string name="Cancelar">Cancelar</string>
+    <string name="Cadastrar">Cadastrar</string>
 </resources>
