@@ -8,7 +8,7 @@
     android:background="@color/lightGrey"
     android:isScrollContainer="true"
     android:scrollbars="vertical"
-    tools:context=".MainActivity">
+    tools:context=".activity_cadastro_foodtruck">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/edtNomeEstab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -206,15 +206,17 @@
                     android:text="@string/Cancelar" android:id="@+id/btncancelar"/>
 
             <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/colorSecondary"
-                    android:padding="20dp"
-                    android:textColor="@color/colorSecondaryDark"
-                    android:text="@string/Cadastrar"
-                    android:id="@+id/btncadastrar"/>
+                android:id="@+id/btncadastrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorSecondary"
+                android:onClick="signup"
+                android:padding="20dp"
+                android:text="@string/Cadastrar"
+                android:textColor="@color/colorSecondaryDark"
+                 />
         </LinearLayout>
 
     </LinearLayout>

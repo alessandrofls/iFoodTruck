@@ -59,6 +59,7 @@
     <string name="VisualizarPratos">Visualizar Pratos</string>
     <string name="EnviarComentario">Enviar Comentario</string>
     <string name="tpPreco">R$</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps" translatable="false">Map</string>
     <string name="Mapa">Ir para o Mapa</string>
+    <string name="MensagemErro">Login Ou Senha Invalidos</string>
 </resources>

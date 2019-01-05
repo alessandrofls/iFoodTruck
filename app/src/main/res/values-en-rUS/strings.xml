@@ -61,4 +61,5 @@
     <string name="EnviarComentario">Send Comments</string>
     <string name="tpPreco">R$</string>
     <string name="Mapa">Ir para o Mapa</string>
+    <string name="MensagemErro">Login or PassWord is Wrong</string>
 </resources>

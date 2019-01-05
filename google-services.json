@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "231390859951",
+    "firebase_url": "https://ifoodtruck-8eb3c.firebaseio.com",
+    "project_id": "ifoodtruck-8eb3c",
+    "storage_bucket": "ifoodtruck-8eb3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231390859951:android:637150a320e550e5",
+        "android_client_info": {
+          "package_name": "com.example.ifoodtruck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "231390859951-270efguob1h6a1q02gcfk2lof2pnc0u5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ifoodtruck",
+            "certificate_hash": "c81734d4908ca294fa33a4493998dbf3cb7fb268"
+          }
+        },
+        {
+          "client_id": "231390859951-topdmejs6scosojvn85rtss5cltpnrnq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgelSFA0uPTdW3-PBOtdDoyBJBm-VYjSg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "231390859951-topdmejs6scosojvn85rtss5cltpnrnq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

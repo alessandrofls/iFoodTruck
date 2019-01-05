@@ -89,14 +89,15 @@
                     android:textSize="11sp" android:text="@string/lembraruser"/>
 
             <android.support.design.button.MaterialButton
-                    android:id="@+id/btentrar"
-                    style="@style/Widget.MaterialComponents.Button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:backgroundTint="@color/colorSecondaryDark"
-                    android:text="@string/login"
-                    app:backgroundTint="@color/colorSecondary"/>
+                android:id="@+id/btentrar"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/colorSecondaryDark"
+                android:onClick="signin"
+                android:text="@string/login"
+                app:backgroundTint="@color/colorSecondary" />
 
         </LinearLayout>
     </RelativeLayout>
