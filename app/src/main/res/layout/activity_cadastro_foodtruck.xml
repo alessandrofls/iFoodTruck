@@ -17,7 +17,7 @@
         android:orientation="vertical"
         android:scrollbars="vertical" >
 
-    <android.support.v7.widget.Toolbar
+        <android.support.v7.widget.Toolbar
         android:id="@+id/tool_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -31,6 +31,13 @@
         android:layout_below="@+id/tool_bar"
         android:orientation="vertical"
         android:scrollbars="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="selectImage"
+            app:srcCompat="@mipmap/ifood" />
 
         <TextView
             android:id="@+id/textView"
@@ -181,6 +188,7 @@
 
 
         <CheckBox
+            android:id="@+id/cbAccept"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
