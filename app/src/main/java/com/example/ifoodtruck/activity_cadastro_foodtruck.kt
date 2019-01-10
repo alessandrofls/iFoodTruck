@@ -55,6 +55,7 @@ class activity_cadastro_foodtruck : AppCompatActivity() {
     }
     fun signup (view: View){
 
+//            mAuth.currentUser.uid
         val uuid = UUID.randomUUID()
         val imageName = "ImagensFoodTrucks/$uuid.jpg"
 

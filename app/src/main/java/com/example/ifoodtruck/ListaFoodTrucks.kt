@@ -25,20 +25,20 @@ class ListaFoodTrucks : AppCompatActivity() {
         return listOf(
                 FoodTruck("Japonese",
                         "Seu Japa",
-                        1234567,"rua japy","japonese","123","123","jap"),
+                        "1234567","rua japy","japonese","123","123","jap",""),
                 FoodTruck("Italyan",
                         "SR. Italiano",
-                        1234567,"rua da italia","comida italiana","123","123","ita"),
+                        "1234567","rua da italia","comida italiana","123","123","ita",""),
                 FoodTruck("Hamburguer",
-                        "Mrs. Hamb", 1234567,"rua da alegria","hamburgueres","123","123","ham"),
+                        "Mrs. Hamb", "1234567","rua da alegria","hamburgueres","123","123","ham",""),
 
                 FoodTruck("Japonese",
                         "Seu Japa",
-                        1234567,"rua japy","japonese","123","123","jap"),
+                        "1234567","rua japy","japonese","123","123","jap",""),
                 FoodTruck("Italyan",
                         "SR. Italiano",
-                        1234567,"rua da italia","comida italiana","123","123","ita"),
+                        "1234567","rua da italia","comida italiana","123","123","ita",""),
                 FoodTruck("Hamburguer",
-                        "Mrs. Hamb", 1234567,"rua da alegria","hamburgueres","123","123","ham"))
+                        "Mrs. Hamb", "1234567","rua da alegria","hamburgueres","123","123","ham",""))
     }
 }
