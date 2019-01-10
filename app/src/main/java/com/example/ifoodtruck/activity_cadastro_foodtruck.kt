@@ -80,7 +80,6 @@ class activity_cadastro_foodtruck : AppCompatActivity() {
                             dbRef!!.child("FoodTruck").child(uuidString).child("senha").setValue(eTSenha.text.toString())
 
 
-
                         storageReference.getDownloadUrl().addOnSuccessListener { uri ->
                             dbRef!!.child("FoodTruck").child(uuidString).child("foto").setValue(uri.toString())
                         }
