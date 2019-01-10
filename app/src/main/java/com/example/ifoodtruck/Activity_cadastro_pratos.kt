@@ -14,8 +14,7 @@ import android.support.v4.content.ContextCompat
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_cadastro_foodtruck.*
@@ -49,8 +48,11 @@ class Activity_cadastro_pratos : AppCompatActivity() {
 
     fun cadastrarPrato (view: View){
 
-        var key = mAuth!!.currentUser!!.uid.toString()
+//        var key = mAuth!!.currentUser!!.email.toString()
+        var userEmail=  mAuth!!.currentUser!!.email.toString()
 
+
+//        println(key)
         val uuid = UUID.randomUUID()
         val imageName = "ImagensPratos/$uuid.jpg"
 
@@ -59,6 +61,22 @@ class Activity_cadastro_pratos : AppCompatActivity() {
         var uploadTask = storageReference.putFile(selected!!)
 
         val uuidString = uuid.toString()
+        var key = ""
+        var query= dbRef!!.child("FoodTruck").orderByChild("login").equalTo(userEmail)
+        query.addListenerForSingleValueEvent( object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+
+            override fun onDataChange(p0: DataSnapshot) {
+
+              key =  p0.key.toString()
+
+            }
+
+        })
+
+
 
         uploadTask.addOnSuccessListener { taskSnapshot ->
 
