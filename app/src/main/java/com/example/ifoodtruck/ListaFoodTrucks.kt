@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.StaggeredGridLayoutManager
 import com.example.ifoodtruck.Adapter.FoodTrucksRecyclerAdapter
 import com.example.ifoodtruck.Beans.FoodTruck
+import com.example.ifoodtruck.Beans.Prato
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_lista_food_trucks.*
 
@@ -23,12 +24,13 @@ class ListaFoodTrucks : AppCompatActivity() {
         myRef = firebaseDatabase!!.getReference()
 
 
+        foodtruck = CarregaDados()
         val recyclerView = l_recyclerView
-        recyclerView.adapter = FoodTrucksRecyclerAdapter(CarregaDados(), this)
+        recyclerView.adapter = FoodTrucksRecyclerAdapter(foodtruck, this)
         val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         recyclerView.layoutManager = layoutManager
 
-
+    }
 
 //    private fun notes(): List<FoodTruck> {
 //        return listOf(
@@ -50,8 +52,9 @@ class ListaFoodTrucks : AppCompatActivity() {
 //                FoodTruck("Hamburguer",
 //                        "Mrs. Hamb", "1234567","rua da alegria","hamburgueres","123","123","ham",""))
 //    }
-}
-    fun CarregaDados(): ArrayList<FoodTruck> {
+//}
+
+     fun CarregaDados(): ArrayList<FoodTruck> {
 
     val newReference = firebaseDatabase!!.getReference("FoodTruck")
 
@@ -59,14 +62,19 @@ class ListaFoodTrucks : AppCompatActivity() {
 
         override fun onDataChange(p0: DataSnapshot) {
 
-
-
-
             foodtruck.clear()
+
+            println(p0)
+            println("children: " + p0!!.children)
+            println("key:" + p0!!.key)
+            println("value:" + p0!!.value)
+
+
 
             for (snapshot in p0.children) {
 
                 val hashMap = snapshot.value as HashMap<String, String>
+                println("HashMap Size: " +hashMap.size)
 
                 if (hashMap.size > 0) {
 
@@ -86,6 +94,10 @@ class ListaFoodTrucks : AppCompatActivity() {
         }
 
     })
-   return foodtruck
+        return foodtruck
 }
 }
+
+
+
+

@@ -83,17 +83,17 @@
 
         </LinearLayout>
 
-        <fragment
-                android:id="@+id/map"
-                class="com.google.android.gms.maps.SupportMapFragment"
-                android:layout_width="336dp"
-                android:layout_height="298dp"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="26dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="23dp"
-                android:layout_marginLeft="26dp"/>
+        <!--<fragment-->
+                <!--android:id="@+id/map"-->
+                <!--class="com.google.android.gms.maps.SupportMapFragment"-->
+                <!--android:layout_width="336dp"-->
+                <!--android:layout_height="298dp"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_marginStart="26dp"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_marginBottom="23dp"-->
+                <!--android:layout_marginLeft="26dp"/>-->
 
     </LinearLayout>
 

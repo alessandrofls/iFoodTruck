@@ -7,6 +7,7 @@ import android.widget.ImageView
 import com.example.ifoodtruck.Beans.FoodTruck
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_tela_adm.*
 
 class TelaAdm : AppCompatActivity() {
@@ -71,7 +72,8 @@ class TelaAdm : AppCompatActivity() {
                         inputTelefone.text= hashMap["telefone"]
                         inputEndereco.text = hashMap["endereco"]
                         inputEspecialidade.text=  hashMap["especialidade"]
-                        imageAdm.setImageURI(hashMap["foto"])
+
+                        Picasso.with(this@TelaAdm).load(hashMap["foto"]).into(imageAdm);
 
 
 
@@ -89,6 +91,4 @@ class TelaAdm : AppCompatActivity() {
 
 }
 
-private fun ImageView.setImageURI(s: String?) {
 
-}
