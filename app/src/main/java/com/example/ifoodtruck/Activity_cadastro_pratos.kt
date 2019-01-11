@@ -125,7 +125,7 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
         try {
 
             val bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, selected)
-            imageView.setImageBitmap(bitmap)
+            imageButton.setImageBitmap(bitmap)
 
 
         } catch (e: Exception) {
