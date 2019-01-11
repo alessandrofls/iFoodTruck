@@ -41,18 +41,17 @@ class Activity_cadastro_pratos : AppCompatActivity() {
         dbRef = firebaseDatabase!!.reference
         mStorageRef = FirebaseStorage.getInstance().reference
 
-        btnCadastrarPrato.setOnClickListener(){
-            Toast.makeText(this, R.string.messagemcadastrar, Toast.LENGTH_SHORT).show()
-        }
+//        btnCadastrarPrato.setOnClickListener(){
+//            Toast.makeText(this, R.string.messagemcadastrar, Toast.LENGTH_SHORT).show()
+//        }
     }
 
     fun cadastrarPrato (view: View){
 
-//        var key = mAuth!!.currentUser!!.email.toString()
+
         var userEmail=  mAuth!!.currentUser!!.email.toString()
 
 
-//        println(key)
         val uuid = UUID.randomUUID()
         val imageName = "ImagensPratos/$uuid.jpg"
 
@@ -61,33 +60,21 @@ class Activity_cadastro_pratos : AppCompatActivity() {
         var uploadTask = storageReference.putFile(selected!!)
 
         val uuidString = uuid.toString()
-        var key = ""
-        var query= dbRef!!.child("FoodTruck").orderByChild("login").equalTo(userEmail)
-        query.addListenerForSingleValueEvent( object : ValueEventListener {
-            override fun onCancelled(p0: DatabaseError) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
 
-            override fun onDataChange(p0: DataSnapshot) {
-
-              key =  p0.key.toString()
-
-            }
-
-        })
 
 
 
         uploadTask.addOnSuccessListener { taskSnapshot ->
 
-            dbRef!!.child("FoodTruck").child(key).child("ListaPrato").child(uuidString).child("NomePrato").setValue(eTNomePrato.text.toString())
-            dbRef!!.child("FoodTruck").child(key).child("ListaPrato").child(uuidString).child("Preco").setValue(eTPreco.text.toString())
-            dbRef!!.child("FoodTruck").child(key).child("ListaPrato").child(uuidString).child("Descricao").setValue(editTextDescricao.text.toString())
+            dbRef!!.child("ListaPrato").child(uuidString).child("NomePrato").setValue(eTNomePrato.text.toString())
+            dbRef!!.child("ListaPrato").child(uuidString).child("Preco").setValue(eTPreco.text.toString())
+            dbRef!!.child("ListaPrato").child(uuidString).child("Descricao").setValue(editTextDescricao.text.toString())
+            dbRef!!.child("ListaPrato").child(uuidString).child("userLogin").setValue(userEmail)
 
 
 
             storageReference.getDownloadUrl().addOnSuccessListener { uri ->
-                dbRef!!.child("FoodTruck").child(key).child("ListaPrato").child(uuidString).child("FotoURI").setValue(uri.toString())
+                dbRef!!.child("ListaPrato").child(uuidString).child("FotoURI").setValue(uri.toString())
             }
         }
 

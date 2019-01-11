@@ -6,39 +6,86 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.StaggeredGridLayoutManager
 import com.example.ifoodtruck.Adapter.FoodTrucksRecyclerAdapter
 import com.example.ifoodtruck.Beans.FoodTruck
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_lista_food_trucks.*
 
 class ListaFoodTrucks : AppCompatActivity() {
+    var foodtruck: ArrayList<FoodTruck> = ArrayList()
     private lateinit var linearLayoutManager: LinearLayoutManager
+    var firebaseDatabase: FirebaseDatabase? = null
+    var myRef: DatabaseReference? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_food_trucks)
 
-        val recyclerView =l_recyclerView
-        recyclerView.adapter = FoodTrucksRecyclerAdapter(notes(), this)
+        firebaseDatabase = FirebaseDatabase.getInstance()
+        myRef = firebaseDatabase!!.getReference()
+
+
+        val recyclerView = l_recyclerView
+        recyclerView.adapter = FoodTrucksRecyclerAdapter(CarregaDados(), this)
         val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         recyclerView.layoutManager = layoutManager
 
-    }
 
-    private fun notes(): List<FoodTruck> {
-        return listOf(
-                FoodTruck("Japonese",
-                        "Seu Japa",
-                        "1234567","rua japy","japonese","123","123","jap",""),
-                FoodTruck("Italyan",
-                        "SR. Italiano",
-                        "1234567","rua da italia","comida italiana","123","123","ita",""),
-                FoodTruck("Hamburguer",
-                        "Mrs. Hamb", "1234567","rua da alegria","hamburgueres","123","123","ham",""),
 
-                FoodTruck("Japonese",
-                        "Seu Japa",
-                        "1234567","rua japy","japonese","123","123","jap",""),
-                FoodTruck("Italyan",
-                        "SR. Italiano",
-                        "1234567","rua da italia","comida italiana","123","123","ita",""),
-                FoodTruck("Hamburguer",
-                        "Mrs. Hamb", "1234567","rua da alegria","hamburgueres","123","123","ham",""))
-    }
+//    private fun notes(): List<FoodTruck> {
+//        return listOf(
+//                FoodTruck("Japonese",
+//                        "Seu Japa",
+//                        "1234567","rua japy","japonese","123","123","jap",""),
+//                FoodTruck("Italyan",
+//                        "SR. Italiano",
+//                        "1234567","rua da italia","comida italiana","123","123","ita",""),
+//                FoodTruck("Hamburguer",
+//                        "Mrs. Hamb", "1234567","rua da alegria","hamburgueres","123","123","ham",""),
+//
+//                FoodTruck("Japonese",
+//                        "Seu Japa",
+//                        "1234567","rua japy","japonese","123","123","jap",""),
+//                FoodTruck("Italyan",
+//                        "SR. Italiano",
+//                        "1234567","rua da italia","comida italiana","123","123","ita",""),
+//                FoodTruck("Hamburguer",
+//                        "Mrs. Hamb", "1234567","rua da alegria","hamburgueres","123","123","ham",""))
+//    }
+}
+    fun CarregaDados(): ArrayList<FoodTruck> {
+
+    val newReference = firebaseDatabase!!.getReference("FoodTruck")
+
+    newReference.addValueEventListener(object : ValueEventListener {
+
+        override fun onDataChange(p0: DataSnapshot) {
+
+
+
+
+            foodtruck.clear()
+
+            for (snapshot in p0.children) {
+
+                val hashMap = snapshot.value as HashMap<String, String>
+
+                if (hashMap.size > 0) {
+
+                    val UserfoodTruck = FoodTruck(hashMap["nomeEstabelecimento"], hashMap["NomeProprietario"], hashMap["telefone"],
+                            hashMap["endereco"],hashMap["especialidade"], hashMap["senha"] ,hashMap["confirmacaoSenha"],
+                            hashMap["login"],hashMap["foto"] )
+                    foodtruck.add(UserfoodTruck)
+
+
+                }
+            }
+        }
+
+
+        override fun onCancelled(p0: DatabaseError) {
+            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        }
+
+    })
+   return foodtruck
+}
 }

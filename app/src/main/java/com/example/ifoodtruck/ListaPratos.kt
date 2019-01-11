@@ -7,14 +7,22 @@ import com.example.ifoodtruck.Adapter.FoodTrucksRecyclerAdapter
 import com.example.ifoodtruck.Adapter.ListPratosAdapter
 import com.example.ifoodtruck.Beans.FoodTruck
 import com.example.ifoodtruck.Beans.Prato
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_lista_food_trucks.*
 import kotlinx.android.synthetic.main.activity_lista_pratos.*
 
 class ListaPratos : AppCompatActivity() {
+    var prato: ArrayList<Prato> = ArrayList()
+    var firebaseDatabase: FirebaseDatabase? = null
+    var myRef: DatabaseReference? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_pratos)
+
+        firebaseDatabase = FirebaseDatabase.getInstance()
+        myRef = firebaseDatabase!!.getReference()
+
 
         val recyclerView = list_recyclerview
         recyclerView.adapter = ListPratosAdapter(pratos(), this)
@@ -22,23 +30,61 @@ class ListaPratos : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
     }
 
-    private fun pratos(): List<Prato> {
-        return listOf(
-                Prato("Sushi",
-                        "Seu Japa",
-                        20.0),
-                Prato("Temaki",
-                        "pexe cru com alga",
-                        10.50),
-                Prato("Yakissoba",
-                        "macarrao japones", 22.30),
-                Prato("Sushi",
-                        "Seu Japa",
-                        20.0),
-                Prato("Temaki",
-                        "pexe cru com alga",
-                        10.50),
-                Prato("Yakissoba",
-                        "macarrao japones", 22.30))
+//    private fun pratos(): List<Prato> {
+//        return listOf(
+//                Prato("Sushi",
+//                        "Seu Japa",
+//                        20.0),
+//                Prato("Temaki",
+//                        "pexe cru com alga",
+//                        10.50),
+//                Prato("Yakissoba",
+//                        "macarrao japones", 22.30),
+//                Prato("Sushi",
+//                        "Seu Japa",
+//                        20.0),
+//                Prato("Temaki",
+//                        "pexe cru com alga",
+//                        10.50),
+//                Prato("Yakissoba",
+//                        "macarrao japones", 22.30))
+//    }
+
+    fun pratos(): List<Prato> {
+
+        val newReference = firebaseDatabase!!.getReference("FoodTruck")
+
+        newReference.addValueEventListener(object : ValueEventListener {
+
+            override fun onDataChange(p0: DataSnapshot) {
+
+
+
+
+                prato.clear()
+
+                for (snapshot in p0.children) {
+
+                    val hashMap = snapshot.value as HashMap<String, String>
+
+                    if (hashMap.size > 0) {
+
+                        val userprato = Prato(hashMap["NomePrato"], hashMap["Descricao"], hashMap["Preco"],
+                                hashMap["userLogin"],hashMap["FotoURI"])
+                        prato.add(userprato)
+
+
+                    }
+                }
+            }
+
+
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+
+        })
+        return prato
+
     }
 }
