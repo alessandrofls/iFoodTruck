@@ -2,6 +2,7 @@ package com.example.ifoodtruck.Adapter
 
 import android.content.Context
 import android.content.Intent
+import android.media.Image
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +10,9 @@ import android.view.ViewGroup
 import com.example.ifoodtruck.Beans.FoodTruck
 import com.example.ifoodtruck.Beans.Prato
 import com.example.ifoodtruck.R
+import com.example.ifoodtruck.R.id.inputImage
 import com.example.ifoodtruck.TelaUser
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.recyclerview_item_row_foodtruck.view.*
 import kotlinx.android.synthetic.main.recycleview_pratos.view.*
 
@@ -38,12 +41,13 @@ class ListPratosAdapter (private val lprato: List<Prato>, private val context: C
             val nomeprato = itemView.inputNomePrato
             val Descricao = itemView.inputDescricao
             val preco = itemView.inputPreco
-//            val imagem = itemView.inputImage
+            val imagem = itemView.inputImage
 
             nomeprato.text = note.NomePrato
             Descricao.text = note.Descricao
             preco.text = note.Preco.toString()
-//            imagem.setImageURI(note.imagem.)
+
+            Picasso.with(itemView.context).load(note.FotoURI).into(imagem);
 
         }
 

@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_lista_food_trucks.*
 import kotlinx.android.synthetic.main.activity_lista_pratos.*
 
 class ListaPratos : AppCompatActivity() {
-    var prato: ArrayList<Prato> = ArrayList()
+    var lstprato: List<Prato>? = null
     var firebaseDatabase: FirebaseDatabase? = null
     var myRef: DatabaseReference? = null
 
@@ -23,9 +23,9 @@ class ListaPratos : AppCompatActivity() {
         firebaseDatabase = FirebaseDatabase.getInstance()
         myRef = firebaseDatabase!!.getReference()
 
-
+        lstprato = pratos()
         val recyclerView = list_recyclerview
-        recyclerView.adapter = ListPratosAdapter(pratos(), this)
+        recyclerView.adapter = ListPratosAdapter(lstprato as ArrayList<Prato>, this)
         val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         recyclerView.layoutManager = layoutManager
     }
@@ -52,13 +52,13 @@ class ListaPratos : AppCompatActivity() {
 
     fun pratos(): List<Prato> {
 
+        var prato: ArrayList<Prato> = ArrayList()
+
         val newReference = firebaseDatabase!!.getReference("FoodTruck")
 
         newReference.addValueEventListener(object : ValueEventListener {
 
             override fun onDataChange(p0: DataSnapshot) {
-
-
 
 
                 prato.clear()

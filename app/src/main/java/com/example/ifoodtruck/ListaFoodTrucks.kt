@@ -11,7 +11,7 @@ import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_lista_food_trucks.*
 
 class ListaFoodTrucks : AppCompatActivity() {
-    var foodtruck: ArrayList<FoodTruck> = ArrayList()
+    var lstFood: List<FoodTruck>? = null
     private lateinit var linearLayoutManager: LinearLayoutManager
     var firebaseDatabase: FirebaseDatabase? = null
     var myRef: DatabaseReference? = null
@@ -24,9 +24,9 @@ class ListaFoodTrucks : AppCompatActivity() {
         myRef = firebaseDatabase!!.getReference()
 
 
-        foodtruck = CarregaDados()
+        lstFood = CarregaDados()
         val recyclerView = l_recyclerView
-        recyclerView.adapter = FoodTrucksRecyclerAdapter(foodtruck, this)
+        recyclerView.adapter = FoodTrucksRecyclerAdapter(lstFood as ArrayList<FoodTruck>, this)
         val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         recyclerView.layoutManager = layoutManager
 
@@ -55,6 +55,7 @@ class ListaFoodTrucks : AppCompatActivity() {
 //}
 
      fun CarregaDados(): ArrayList<FoodTruck> {
+         var foodtruck: ArrayList<FoodTruck> = ArrayList()
 
     val newReference = firebaseDatabase!!.getReference("FoodTruck")
 
@@ -64,10 +65,10 @@ class ListaFoodTrucks : AppCompatActivity() {
 
             foodtruck.clear()
 
-            println(p0)
-            println("children: " + p0!!.children)
-            println("key:" + p0!!.key)
-            println("value:" + p0!!.value)
+//            println(p0)
+//            println("children: " + p0!!.children)
+//            println("key:" + p0!!.key)
+//            println("value:" + p0!!.value)
 
 
 
