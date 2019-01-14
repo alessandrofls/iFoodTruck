@@ -54,7 +54,7 @@ class ListaPratos : AppCompatActivity() {
 
         var prato: ArrayList<Prato> = ArrayList()
 
-        val newReference = firebaseDatabase!!.getReference("FoodTruck")
+        val newReference = firebaseDatabase!!.getReference("ListaPrato")
 
         newReference.addValueEventListener(object : ValueEventListener {
 
