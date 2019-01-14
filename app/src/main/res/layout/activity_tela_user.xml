@@ -181,6 +181,17 @@
             android:hint="@string/cadComentario"
             android:inputType="text" />
 
+        <TextView
+            android:id="@+id/tvURI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cadNomeEstabelecimento"
+            android:textColor="@color/colorSecondaryDark"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
         <!--<android.support.design.widget.TextInputLayout-->
             <!--style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"-->
             <!--android:layout_width="match_parent"-->

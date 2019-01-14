@@ -76,6 +76,17 @@
                         android:textSize="24sp"
                         android:layout_marginLeft="5dp"
                         android:paddingLeft="5dp"/>
+
+                <TextView
+                    android:id="@+id/loginUser"
+                    android:layout_width="137dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textStyle="normal|bold"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="5dp"
+                    android:paddingLeft="5dp"/>
             </LinearLayout>
 
         </LinearLayout>

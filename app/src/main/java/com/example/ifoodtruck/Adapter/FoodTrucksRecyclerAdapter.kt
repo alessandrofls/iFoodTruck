@@ -14,6 +14,7 @@ import com.example.ifoodtruck.R.id.imageAdm
 import com.example.ifoodtruck.TelaUser
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_tela_adm.*
+import kotlinx.android.synthetic.main.activity_tela_user.view.*
 import kotlinx.android.synthetic.main.recyclerview_item_row_foodtruck.view.*
 
 class FoodTrucksRecyclerAdapter (private val notes: List<FoodTruck>, private val context: Context): Adapter<FoodTrucksRecyclerAdapter.ViewHolder>()  {
@@ -43,6 +44,8 @@ class FoodTrucksRecyclerAdapter (private val notes: List<FoodTruck>, private val
             val telefone = itemView.inputTelefone
             val endereco = itemView.inputEndereco
             val Image = itemView.itemImage
+             itemView.tvURI.text = note.foto
+
 
             nomeestab.text = note.nomeEstabelecimento
             especialidade.text = note.especialidade
@@ -58,7 +61,7 @@ class FoodTrucksRecyclerAdapter (private val notes: List<FoodTruck>, private val
                 Detalhes.putExtra("Espec",itemView.inputEspecialidade.text.toString() )
                 Detalhes.putExtra("telefone",itemView.inputTelefone.text.toString() )
                 Detalhes.putExtra("endereco",itemView.inputEndereco.text.toString() )
-
+                Detalhes.putExtra("foto",itemView.tvURI.text.toString() )
 
                 itemView.context.startActivity(Detalhes)
             }

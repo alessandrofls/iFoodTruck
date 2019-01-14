@@ -42,11 +42,12 @@ class ListPratosAdapter (private val lprato: List<Prato>, private val context: C
             val Descricao = itemView.inputDescricao
             val preco = itemView.inputPreco
             val imagem = itemView.inputImage
+            val user = itemView.loginUser
 
             nomeprato.text = note.NomePrato
             Descricao.text = note.Descricao
             preco.text = note.Preco.toString()
-
+            user.text = note.userLogin
             Picasso.with(itemView.context).load(note.FotoURI).into(imagem);
 
         }

@@ -1,6 +1,7 @@
 package com.example.ifoodtruck
 
 import android.content.Intent
+import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
@@ -28,8 +29,11 @@ class TelaUser : AppCompatActivity() {
         inputEspecialidadeUser.text       = int.getStringExtra("Espec")
         inputTelefoneUser.text            = int.getStringExtra("telefone")
         inputEnderecoUser.text            = int.getStringExtra("endereco")
+        var Urimagem                      =  int.getStringExtra("foto")
 
-        getDataFromFirebase ()
+        Picasso.with(this@TelaUser).load(Urimagem).into(imageUser)
+
+//        getDataFromFirebase ()
 
         btnverpratos.setOnClickListener(){
             val ListPratos = Intent (this, ListaPratos::class.java)
