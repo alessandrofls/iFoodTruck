@@ -29,11 +29,11 @@ class TelaUser : AppCompatActivity() {
         inputEspecialidadeUser.text       = int.getStringExtra("Espec")
         inputTelefoneUser.text            = int.getStringExtra("telefone")
         inputEnderecoUser.text            = int.getStringExtra("endereco")
-        var Urimagem                      =  int.getStringExtra("foto")
+//        var Urimagem                      =  int.getStringExtra("foto")
+//
+//        Picasso.with(this@TelaUser).load(Urimagem).into(imageUser)
 
-        Picasso.with(this@TelaUser).load(Urimagem).into(imageUser)
-
-//        getDataFromFirebase ()
+        getDataFromFirebase ()
 
         btnverpratos.setOnClickListener(){
             val ListPratos = Intent (this, ListaPratos::class.java)

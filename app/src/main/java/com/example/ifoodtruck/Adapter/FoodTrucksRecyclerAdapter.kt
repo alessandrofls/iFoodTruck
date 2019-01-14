@@ -44,7 +44,7 @@ class FoodTrucksRecyclerAdapter (private val notes: List<FoodTruck>, private val
             val telefone = itemView.inputTelefone
             val endereco = itemView.inputEndereco
             val Image = itemView.itemImage
-             itemView.tvURI.text = note.foto
+//             itemView.tvURI.text = note.foto
 
 
             nomeestab.text = note.nomeEstabelecimento
@@ -61,7 +61,7 @@ class FoodTrucksRecyclerAdapter (private val notes: List<FoodTruck>, private val
                 Detalhes.putExtra("Espec",itemView.inputEspecialidade.text.toString() )
                 Detalhes.putExtra("telefone",itemView.inputTelefone.text.toString() )
                 Detalhes.putExtra("endereco",itemView.inputEndereco.text.toString() )
-                Detalhes.putExtra("foto",itemView.tvURI.text.toString() )
+//                Detalhes.putExtra("foto",itemView.tvURI.text.toString() )
 
                 itemView.context.startActivity(Detalhes)
             }

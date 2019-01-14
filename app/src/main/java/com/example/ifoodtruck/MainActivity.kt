@@ -21,8 +21,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(int2)
         }
         btnSearch.setOnClickListener (){
-            val int3 = Intent (this, TelaInicial::class.java)
-            startActivity(int3)
+            val intListFood = Intent (this, ListaFoodTrucks::class.java)
+            startActivity(intListFood)
+//            val int3 = Intent (this, TelaInicial::class.java)
+//            startActivity(int3)
 
         }
     }
