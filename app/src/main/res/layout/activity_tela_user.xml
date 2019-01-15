@@ -152,7 +152,7 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="16sp"/>
 
-        <android.support.design.button.MaterialButton
+        <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
@@ -161,6 +161,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="@color/colorSecondary"
                 android:padding="20dp"
+                android:textColor="@color/white"
                 android:id="@+id/btnverpratos" android:text="@string/VisualizarPratos"/>
 
         <TextView
@@ -206,7 +207,7 @@
                 <!--android:textColorHint="@color/colorPrimary" />-->
         <!--</android.support.design.widget.TextInputLayout>-->
 
-        <android.support.design.button.MaterialButton
+        <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -214,6 +215,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/colorSecondary"
+                android:textColor="@color/white"
                 android:padding="20dp"
                 android:text="@string/EnviarComentario"/>
 
