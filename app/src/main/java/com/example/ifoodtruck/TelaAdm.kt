@@ -70,8 +70,8 @@ class TelaAdm : AppCompatActivity() {
                     println("valueeee" +  snapshot.value )
 
                     if (hashMap.size > 0) {
-                        inputNomeEstabelecimento.text= hashMap["nomeEstabelecimento"]
 
+                        inputNomeEstabelecimento.text= hashMap["nomeEstabelecimento"]
 
                         inputNomeProprietario.text = hashMap["NomeProprietario"]
                         inputTelefone.text= hashMap["telefone"]

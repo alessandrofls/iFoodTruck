@@ -194,7 +194,7 @@
                     android:padding="20dp"
                     android:textColor="@color/white"
                     android:text="@string/Cancelar"
-                    android:textStyle="bold" android:id="@+id/btnCamcelarPrato"/>
+                    android:textStyle="bold" android:id="@+id/btnCamcelarPrato" android:onClick="btncancelar"/>
 
             <Button
                     android:layout_width="match_parent"

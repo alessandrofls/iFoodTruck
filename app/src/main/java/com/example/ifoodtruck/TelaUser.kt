@@ -47,7 +47,7 @@ class TelaUser : AppCompatActivity() {
 
 //        val query = firebaseDatabase!!.getReference("FoodTruck")
         val raiz = FirebaseDatabase.getInstance().reference
-        val query = raiz.child("FoodTruck").orderByChild("NomeEstabelecimento").equalTo(nome)
+        val query = raiz.child("FoodTruck").orderByChild("nomeEstabelecimento").equalTo(nome)
 
 
         query.addValueEventListener(object : ValueEventListener {
@@ -66,6 +66,7 @@ class TelaUser : AppCompatActivity() {
 
                     if (hashMap.size > 0) {
 
+                        inputNomeProprietarioUser.text = hashMap["NomeProprietario"]
                         Picasso.with(this@TelaUser).load(hashMap["foto"]).into(imageUser);
 
 

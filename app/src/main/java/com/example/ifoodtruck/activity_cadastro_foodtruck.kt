@@ -49,6 +49,9 @@ class activity_cadastro_foodtruck : AppCompatActivity() {
         dbRef = firebaseDatabase!!.reference
         mStorageRef = FirebaseStorage.getInstance().reference
 
+
+
+
 //        btncadastrar.setOnClickListener(){
 //
 //            Toast.makeText(this, R.string.messagemcadastrar, Toast.LENGTH_SHORT).show()
@@ -64,7 +67,7 @@ class activity_cadastro_foodtruck : AppCompatActivity() {
     }
     fun signup (view: View) {
 
-        if (tipo.equals("cadastrar")) {
+
 
 
             val uuid = UUID.randomUUID()
@@ -110,91 +113,93 @@ class activity_cadastro_foodtruck : AppCompatActivity() {
 
             }
 
-        } else if (tipo.equals("update")) {
-
-
-            var serAtual = mAuth!!.currentUser!!.email.toString()
-
-//        val query = firebaseDatabase!!.getReference("FoodTruck")
-            val raiz = FirebaseDatabase.getInstance().reference
-            val query = raiz.child("FoodTruck").orderByChild("login").equalTo(serAtual)
-
-
-            query.addValueEventListener(object : ValueEventListener {
-
-                override fun onDataChange(p0: DataSnapshot) {
-
-                    println(p0)
-                    println("children: " + p0!!.children)
-                    println("key:" + p0!!.key)
-                    println("value:" + p0!!.value)
-
-                    println("ref:" + p0!!.ref)
-
-//               raiz.child().child(p0.key).
-
-                    for (snapshot in p0.children) {
-
-                        val hashMap = snapshot.value as HashMap<String, String>
-                        println("valueeee" + snapshot.value)
-
-                        if (hashMap.size > 0) {
-                            chave = hashMap["Id"]
-
-
-                        }
-                    }
-                }
-
-                override fun onCancelled(p0: DatabaseError) {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-                }
-            })
-
-
-            val uuid = chave
-            val imageName = "ImagensFoodTrucks/$uuid.jpg"
-
-            val storageReference = mStorageRef!!.child(imageName)
-
-            var uploadTask = storageReference.putFile(selected!!)
-
-            val uuidString = uuid.toString()
-
-
-            if (eTSenha.text.toString().equals(eTConfirmaSenha.text.toString()) && cbAccept.isChecked) {
-
-                mAuth!!.createUserWithEmailAndPassword(eTLogin.text.toString(), eTSenha.text.toString())
-
-                uploadTask.addOnSuccessListener { taskSnapshot ->
-
-                    dbRef!!.child("FoodTruck").child(uuidString).child("nomeEstabelecimento").setValue(edtNomeEstab.text.toString())
-                    dbRef!!.child("FoodTruck").child(uuidString).child("NomeProprietario").setValue(eTNomeProprietario.text.toString())
-                    dbRef!!.child("FoodTruck").child(uuidString).child("telefone").setValue(eTTelefone.text.toString())
-                    dbRef!!.child("FoodTruck").child(uuidString).child("endereco").setValue(eTcadEndereco.text.toString())
-                    dbRef!!.child("FoodTruck").child(uuidString).child("especialidade").setValue(eTEspecialidade.text.toString())
-                    dbRef!!.child("FoodTruck").child(uuidString).child("login").setValue(eTLogin.text.toString())
-                    dbRef!!.child("FoodTruck").child(uuidString).child("senha").setValue(eTSenha.text.toString())
-
-
-                    storageReference.getDownloadUrl().addOnSuccessListener { uri ->
-                        dbRef!!.child("FoodTruck").child(uuidString).child("foto").setValue(uri.toString())
-                    }
-                }
-
-                uploadTask.addOnCompleteListener { task ->
-                    if (task.isComplete) {
-                        Toast.makeText(this, R.string.messagemcadastrar, Toast.LENGTH_SHORT).show()
-
-                    }
-                }
-                        .addOnFailureListener { exception ->
-                            Toast.makeText(this, R.string.MensagemErro, Toast.LENGTH_SHORT).show()
-                        }
-
-
-            }
-        }
+//        } else if (tipo.equals("update")) {
+//
+//
+//            var serAtual = mAuth!!.currentUser!!.email.toString()
+//
+////        val query = firebaseDatabase!!.getReference("FoodTruck")
+//            val raiz = FirebaseDatabase.getInstance().reference
+//            val query = raiz.child("FoodTruck").orderByChild("login").equalTo(serAtual)
+//
+//
+//            query.addValueEventListener(object : ValueEventListener {
+//
+//                override fun onDataChange(p0: DataSnapshot) {
+//
+//                    println(p0)
+//                    println("children: " + p0!!.children)
+//                    println("key:" + p0!!.key)
+//                    println("value:" + p0!!.value)
+//
+//                    println("ref:" + p0!!.ref)
+//
+////               raiz.child().child(p0.key).
+//
+//                    for (snapshot in p0.children) {
+//
+//                        val hashMap = snapshot.value as HashMap<String, String>
+//
+//                        if (hashMap.size > 0) {
+//
+//                            chave = hashMap["Id"]
+//
+//
+//
+//
+//                        }
+//                    }
+//                }
+//
+//                override fun onCancelled(p0: DatabaseError) {
+//                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//                }
+//            })
+//
+//
+//            val uuid = chave
+//            val imageName = "ImagensFoodTrucks/$uuid.jpg"
+//
+//            val storageReference = mStorageRef!!.child(imageName)
+//
+//            var uploadTask = storageReference.putFile(selected!!)
+//
+//            val uuidString = uuid.toString()
+//
+//
+//            if (eTSenha.text.toString().equals(eTConfirmaSenha.text.toString()) && cbAccept.isChecked) {
+//
+//                mAuth!!.createUserWithEmailAndPassword(eTLogin.text.toString(), eTSenha.text.toString())
+//
+//                uploadTask.addOnSuccessListener { taskSnapshot ->
+//
+//                    dbRef!!.child("FoodTruck").child(uuidString).child("nomeEstabelecimento").setValue(edtNomeEstab.text.toString())
+//                    dbRef!!.child("FoodTruck").child(uuidString).child("NomeProprietario").setValue(eTNomeProprietario.text.toString())
+//                    dbRef!!.child("FoodTruck").child(uuidString).child("telefone").setValue(eTTelefone.text.toString())
+//                    dbRef!!.child("FoodTruck").child(uuidString).child("endereco").setValue(eTcadEndereco.text.toString())
+//                    dbRef!!.child("FoodTruck").child(uuidString).child("especialidade").setValue(eTEspecialidade.text.toString())
+//                    dbRef!!.child("FoodTruck").child(uuidString).child("login").setValue(eTLogin.text.toString())
+//                    dbRef!!.child("FoodTruck").child(uuidString).child("senha").setValue(eTSenha.text.toString())
+//
+//
+//                    storageReference.getDownloadUrl().addOnSuccessListener { uri ->
+//                        dbRef!!.child("FoodTruck").child(uuidString).child("foto").setValue(uri.toString())
+//                    }
+//                }
+//
+//                uploadTask.addOnCompleteListener { task ->
+//                    if (task.isComplete) {
+//                        Toast.makeText(this, R.string.messagemcadastrar, Toast.LENGTH_SHORT).show()
+//
+//                    }
+//                }
+//                        .addOnFailureListener { exception ->
+//                            Toast.makeText(this, R.string.MensagemErro, Toast.LENGTH_SHORT).show()
+//                        }
+//
+//
+//            }
+//        }
 
     }
 
@@ -245,4 +250,63 @@ class activity_cadastro_foodtruck : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
     }
 
+
+//    fun getDataFromFirebase(){
+//
+//        var serAtual= mAuth!!.currentUser!!.email.toString()
+//
+////        val query = firebaseDatabase!!.getReference("FoodTruck")
+//        val raiz = FirebaseDatabase.getInstance().reference
+//        val query = raiz.child("FoodTruck").orderByChild("login").equalTo(serAtual)
+//
+//
+//        query.addValueEventListener(object : ValueEventListener {
+//
+//            override fun onDataChange(p0: DataSnapshot) {
+//
+//
+//
+//
+////               raiz.child().child(p0.key).
+//
+//                for (snapshot in p0.children) {
+//
+//                    val hashMap = snapshot.value as HashMap<String, String>
+//                    println("valueeee" +  snapshot.value )
+//
+//                    if (hashMap.size > 0) {
+//
+//                        edtNomeEstab.setText( hashMap["nomeEstabelecimento"])
+//
+//                        eTNomeProprietario.setText (hashMap["NomeProprietario"])
+//                        eTTelefone.setText ( hashMap["telefone"])
+//                        eTcadEndereco.setText( hashMap["endereco"])
+//                        eTEspecialidade.setText( hashMap["especialidade"])
+//
+//                        Picasso.with(this@activity_cadastro_foodtruck).load(hashMap["foto"]).into(imageAdm);
+//
+//
+//
+//                    }
+//                }
+//            }
+//
+//            override fun onCancelled(p0: DatabaseError) {
+//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//            }
+//        })
+//
+//
+//    }
+
+    fun cancelar (view: View){
+        if ( tipo.equals("update")) {
+            var voltar = Intent(this, TelaAdm::class.java)
+            startActivity(voltar)
+        }else {
+            var voltar = Intent(this, MainActivity::class.java)
+            startActivity(voltar)
+
+        }
+    }
 }

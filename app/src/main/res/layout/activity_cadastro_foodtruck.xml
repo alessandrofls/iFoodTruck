@@ -208,6 +208,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
+                    android:onClick="cancelar"
                     android:backgroundTint="@color/colorPrimary"
                     android:textColor="@color/white"
                     android:padding="20dp"
@@ -223,7 +224,7 @@
                 android:onClick="signup"
                 android:padding="20dp"
                 android:text="@string/Cadastrar"
-                android:textColor="@color/colorSecondaryDark"
+                android:textColor="@color/white"
                  />
         </LinearLayout>
 

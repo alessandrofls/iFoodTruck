@@ -46,6 +46,12 @@ class Activity_cadastro_pratos : AppCompatActivity() {
 //        }
     }
 
+
+    fun btncancelar(view: View){
+
+        val intCP = Intent (this, TelaAdm::class.java)
+        startActivity(intCP)
+    }
     fun cadastrarPrato (view: View){
 
 

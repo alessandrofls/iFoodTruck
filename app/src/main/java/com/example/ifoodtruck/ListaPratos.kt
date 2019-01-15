@@ -26,7 +26,7 @@ class ListaPratos : AppCompatActivity() {
         lstprato = pratos()
         val recyclerView = list_recyclerview
         recyclerView.adapter = ListPratosAdapter(lstprato as ArrayList<Prato>, this)
-        val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        val layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
         recyclerView.layoutManager = layoutManager
     }
 
