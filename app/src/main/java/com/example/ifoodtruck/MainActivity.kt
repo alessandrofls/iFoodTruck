@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         btnSignup.setOnClickListener(){
             val int2 = Intent (this, activity_cadastro_foodtruck::class.java)
+            int2.putExtra("tipo", "cadastrar")
             startActivity(int2)
         }
         btnSearch.setOnClickListener (){

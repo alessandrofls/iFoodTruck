@@ -79,6 +79,16 @@
                         android:textColor="@color/black"
                         android:textSize="24sp"
                         android:textStyle="normal|bold" />
+                <TextView
+                    android:id="@+id/loginUser"
+                    android:layout_width="137dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:paddingLeft="0dp"
+                    android:text="@string/cadPrecoPrato"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="normal|bold" />
             </LinearLayout>
 
         </LinearLayout>

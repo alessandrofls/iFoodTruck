@@ -34,6 +34,7 @@ class TelaAdm : AppCompatActivity() {
 
         btnUpdate.setOnClickListener(){
             val intUpdate = Intent (this, activity_cadastro_foodtruck::class.java)
+            intUpdate.putExtra("tipo", "atualizar")
             startActivity(intUpdate)
         }
         btnlstpratos.setOnClickListener(){
@@ -54,15 +55,19 @@ class TelaAdm : AppCompatActivity() {
 
             override fun onDataChange(p0: DataSnapshot) {
 
-                //println(p0)
-                //println("children: " + p0!!.children)
-                //println("key:" + p0!!.key)
-                //println("value:" + p0!!.value)
+                println(p0)
+                println("children: " + p0!!.children)
+                println("key:" + p0!!.key)
+                println("value:" + p0!!.value)
+
+                println("ref:" + p0!!.ref)
+
 //               raiz.child().child(p0.key).
 
                 for (snapshot in p0.children) {
 
                     val hashMap = snapshot.value as HashMap<String, String>
+                    println("valueeee" +  snapshot.value )
 
                     if (hashMap.size > 0) {
                         inputNomeEstabelecimento.text= hashMap["nomeEstabelecimento"]

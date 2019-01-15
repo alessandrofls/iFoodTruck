@@ -20,7 +20,8 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/colorPrimary"
                 app:title="@string/bsTituloUser"
-                app:titleTextColor="#FFFFFF"></android.support.v7.widget.Toolbar>
+                app:titleTextColor="#FFFFFF"
+                android:padding="10dp"></android.support.v7.widget.Toolbar>
 
 
     <LinearLayout
