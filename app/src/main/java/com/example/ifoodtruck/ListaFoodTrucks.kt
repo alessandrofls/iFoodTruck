@@ -65,11 +65,6 @@ class ListaFoodTrucks : AppCompatActivity() {
 
             foodtruck.clear()
 
-//            println(p0)
-//            println("children: " + p0!!.children)
-//            println("key:" + p0!!.key)
-//            println("value:" + p0!!.value)
-
 
 
             for (snapshot in p0.children) {
